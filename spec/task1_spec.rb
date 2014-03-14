@@ -1,10 +1,16 @@
-require "task1"
+require_relative "../lib/task1"
 
-describe Task1 do 
-	
-	let(:array) {[1,2,3,4,5,6]}
+describe "the_ross_injector" do
+
+	let(:da_array_init) {[1,2,3,4,5,6]}
 
 	it "should inject into an array" do
-		expect(array.inject {|sum,x| sum+x} ).to eq 21
+		expect(da_array_init.inject {|sum,x| sum+x} ).to eq(21)
 	end
+
+	it "should still work even with new inject method"do
+	expect(da_array_init.the_ross_injector).to eq(21)
+  end
+
+  
 end
