@@ -1,4 +1,4 @@
-require_relative "../lib/task1"
+require "task1"
 
 describe "the_ross_injector" do
 
