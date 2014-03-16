@@ -1,8 +1,9 @@
 class Array
 
+	def the_ross_injector(num=0)
+		sum = num
+		self.each { |x| sum = yield sum, x }
+		sum
+	end
 
-  def the_ross_injector
-    sum = 0
-    self.reduce { |sum,x| sum + x}
-  end
 end
