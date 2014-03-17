@@ -11,4 +11,9 @@ attr_reader :dishes
 		orders.each { |order| total << dishes[order] }
 		total.reduce { |sum,x| sum+x}
 	end
+
+def reciept(orders, total) 
+    sub_total = orders.map { |k,v| @dishes[k]*v }
+    total == sub_total.reduce { |sum,x| sum+x }
+  end
 end 

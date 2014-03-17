@@ -11,8 +11,8 @@ describe Takeaway do
      expect(takeaway.dishes['octopus']).to eq 30
    end
 
-   it "should calculate the total sum of the order" do
-   	expect(takeaway.reciept(['pizza' , 'curry' , 'steak' , 'octopus'])).to eq 75
+   it "should be able to calculate quantities within an order as well as the total" do 
+   	expect(takeaway.reciept({'pizza' => 1 , 'curry' => 2 , 'steak' => 3 , 'octopus' => 4 }, 220)).to be_true
    end
 
 end
