@@ -15,4 +15,8 @@ describe Takeaway do
    	expect(takeaway.reciept({'pizza' => 1 , 'curry' => 2 , 'steak' => 3 , 'octopus' => 4 }, 220)).to be_true
    end
 
+   it "should raise error if the total in wrong" do
+   	expect(takeaway.reciept({'pizza' => 1 , 'curry' => 2 , 'steak' => 3 , 'octopus' => 4 }, 210)).to raise_error
+   end
+
 end
